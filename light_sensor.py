@@ -40,7 +40,7 @@ try:
         ledpin = 0
         if light_level < 20:
             print ('Day')
-            ledpin = 16
+            ledpin = 18
             GPIO.output(ledpin,GPIO.LOW)
         else:
             print ('Night')
