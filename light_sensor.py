@@ -34,10 +34,13 @@ try:
     while True:
         light_level = rc_time(pin_to_circuit)
         #print(rc_time(pin_to_circuit))
+        ledpin = 16
         if light_level < 20:
             print ('Day')
+            GPIO.output(ledpin,GPIO.LOW)
         else:
             print ('Night')
+            GPIO.output(ledpin,GPIO.HIGH)
 except KeyboardInterrupt:
     pass
 finally:
